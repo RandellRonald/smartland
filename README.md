@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# smartland
-=======
 # Smartland
 
 ![Smartland Hero](screenshots/hero_safe.png)
