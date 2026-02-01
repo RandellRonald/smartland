@@ -210,4 +210,4 @@ The foundation is already in place.
 ## Author
 
 Built by a developer focused on building explainable, decision-support software with real-world constraints in mind.
->>>>>>> e721248 (Initial commit: Smartland location intelligence platform)
+
