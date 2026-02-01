@@ -1,0 +1,342 @@
+/* Cards */
+.card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-card);
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+.card-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+/* Inputs */
+.input-group {
+    margin-bottom: 16px;
+}
+
+.input-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text-secondary);
+}
+
+.form-input {
+    width: 100%;
+    height: 44px;
+    border: 1px solid var(--input-border);
+    border-radius: 8px;
+    padding: 0 12px;
+    font-size: 14px;
+    font-family: inherit;
+    transition: border-color 0.2s;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--input-focus);
+}
+
+.btn-primary {
+    width: 100%;
+    height: 44px;
+    background: var(--primary);
+    color: var(--primary-text);
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-primary:hover {
+    background: var(--primary-hover);
+}
+
+.btn-primary:disabled {
+    background: var(--input-border);
+    cursor: not-allowed;
+    color: var(--text-muted);
+}
+
+/* Map */
+.map-container {
+    height: 220px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 1024px) {
+    .map-container {
+        height: 280px;
+    }
+}
+
+/* Risk Tags */
+.risk-tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.risk-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.risk-pill.high {
+    background: var(--risk-high-bg);
+    color: var(--risk-high-text);
+}
+
+.risk-pill.moderate {
+    background: var(--risk-med-bg);
+    color: var(--risk-med-text);
+}
+
+.risk-pill.low {
+    background: var(--risk-low-bg);
+    color: var(--risk-low-text);
+}
+
+/* Detail Cards */
+.detail-card {
+    border: 1px solid var(--border-card);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 12px;
+    background: var(--bg-card);
+}
+
+.detail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.detail-title {
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.toggle-icon {
+    font-size: 12px;
+    color: var(--text-muted);
+    transition: transform 0.2s;
+}
+
+.detail-card.open .toggle-icon {
+    transform: rotate(180deg);
+}
+
+.detail-body {
+    display: none;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border-card);
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.detail-card.open .detail-body {
+    display: block;
+}
+
+.source-line {
+    margin-top: 8px;
+    font-size: 12px;
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+/* Error State */
+.error-card {
+    background: #FEF2F2;
+    border: 1px solid #FCA5A5;
+    padding: 24px;
+    border-radius: 12px;
+    text-align: center;
+    color: #991B1B;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Infrastructure Grid System */
+.infra-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    /* 16px gap */
+    margin-top: 24px;
+}
+
+@media (min-width: 640px) {
+    .infra-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.infra-card {
+    background: #FFFFFF;
+    border: 1px solid var(--border-card);
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    /* Vertically align icon and text */
+    gap: 16px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    cursor: default;
+    position: relative;
+    overflow: hidden;
+}
+
+.infra-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.06);
+}
+
+/* Icon Badge */
+.infra-badge {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.infra-badge svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Content Column */
+.infra-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.infra-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin-bottom: 2px;
+}
+
+.infra-value {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.25;
+}
+
+/* Color Utilities for Values */
+.text-green {
+    color: #166534;
+}
+
+/* Green-800 */
+.text-amber {
+    color: #B45309;
+}
+
+/* Amber-700 */
+.text-neutral {
+    color: var(--text-primary);
+}
+
+/* Badge Backgrounds (Soft Pastels) */
+.bg-blue-soft {
+    background-color: #E0F2FE;
+    color: #0284C7;
+}
+
+/* Light Blue */
+.bg-teal-soft {
+    background-color: #CCFBF1;
+    color: #0D9488;
+}
+
+/* Light Teal */
+.bg-green-soft {
+    background-color: #DCFCE7;
+    color: #16A34A;
+}
+
+/* Light Green */
+.bg-orange-soft {
+    background-color: #FFEDD5;
+    color: #EA580C;
+}
+
+/* Light Orange */
+.bg-purple-soft {
+    background-color: #F3E8FF;
+    color: #9333EA;
+}
+
+/* Light Purple */
+.bg-gray-soft {
+    background-color: #F1F5F9;
+    color: #64748B;
+}
+
+/* Light Slate */
+
+.infra-subtitle {
+    font-size: 14px;
+    color: var(--text-secondary);
+    font-weight: 400;
+    margin-top: -8px;
+    margin-bottom: 24px;
+}
+
+.infra-footer {
+    text-align: center;
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 32px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.8;
+}
+
+/* Safe Location Banner */
+.warning-banner.safe {
+    background-color: #ECFDF5;
+    /* Green 50 */
+    border: 1px solid #6EE7B7;
+    /* Green 300 */
+    color: #065F46;
+    /* Green 800 */
+}
+
+.warning-banner.safe .warning-title {
+    color: #065F46;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}

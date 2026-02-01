@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smartland</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+</head>
+
+<body>
+
+    <div class="container">
+        <header class="app-header">
+            <div class="header-content">
+                <div class="app-title">Smartland</div>
+                <div class="app-subtitle">Environmental & Land Context Analyzer · Kochi City</div>
+            </div>
+        </header>
+
+        <div class="main-grid">
+            <!-- Warning Banner -->
+            <div id="warning-banner-container" class="hidden" style="margin-bottom: 20px;">
+                <div class="warning-banner"
+                    style="background-color: #ffe6e6; border: 1px solid #ff4d4d; border-radius: 8px; padding: 16px; display: flex; align-items: start; gap: 12px;">
+                    <div style="font-size: 24px;">⚠️</div>
+                    <div>
+                        <h3 style="margin: 0 0 4px 0; color: #cc0000; font-size: 16px; font-weight: 700;">High-Risk
+                            Location Identified</h3>
+                        <p style="margin: 0; color: #990000; font-size: 14px;">This location shows multiple critical
+                            environmental or disaster-related constraints.</p>
+                        <p style="margin: 8px 0 0 0; font-size: 12px; color: #666;">This assessment is based on
+                            available historical and spatial data. It does not predict future events and should be used
+                            for awareness only.</p>
+                    </div>
+                </div>
+                <!-- Reasons List -->
+                <div id="constraint-reasons" style="margin-top: 10px; padding: 0 16px;"></div>
+            </div>
+
+            <!-- Left Column: Input -->
+            <div class="input-column">
+                <div class="card">
+                    <h2 class="card-title">Location Analysis</h2>
+                    <div class="input-group">
+                        <label class="input-label" for="coordinates">Coordinates (Latitude, Longitude)</label>
+                        <input type="text" id="coordinates" class="form-input"
+                            placeholder="Example: 9.929582557601877, 76.30895255827387">
+                    </div>
+                    <button id="analyze-btn" class="btn-primary">Analyze Location</button>
+                </div>
+
+                <div id="status-card" class="card hidden">
+                    <div id="loading-spinner" class="hidden">Analyzing...</div>
+                    <div id="error-message" class="hidden error-card"></div>
+                </div>
+
+                <div id="summary-section" class="card hidden">
+                    <h3 class="card-title">Risk Summary</h3>
+                    <div id="risk-tags" class="risk-tags-container">
+                        <!-- Tags will be injected here -->
+                    </div>
+                    <div style="margin-top: 12px; font-size: 13px; color: var(--text-secondary);">
+                        <p><strong>Ward:</strong> <span id="ward-display">-</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Map & Details -->
+            <div class="results-column">
+                <div id="map" class="map-container"></div>
+
+                <div id="details-section" class="hidden">
+                    <h3 class="card-title" style="margin-bottom: 12px;">Detailed Context</h3>
+                    <div id="explanations-container">
+                        <!-- Expandable cards injected here -->
+                    </div>
+
+                    <!-- Data Sources Section -->
+                    <div style="margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--border-card);">
+                        <h4
+                            style="font-size: 14px; font-weight: 600; margin-bottom: 12px; color: var(--text-secondary);">
+                            Referenced Datasets</h4>
+                        <ul id="sources-list" style="list-style: none; font-size: 13px; color: var(--text-muted);">
+                            <!-- Sources injected here -->
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Infrastructure Section -->
+                <div id="infrastructure-section" class="card hidden" style="margin-top: 20px;">
+                    <h3 class="card-title" style="margin-bottom: 12px;">Living & Infrastructure Context</h3>
+                    <div id="infra-container">
+                        <!-- Infrastructure items injected here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="app-footer">
+            <p>This report is based on historical and public datasets. It is not a prediction or legal guarantee.</p>
+            <p style="margin-top: 8px;">&copy; 2024 Smartland · Kochi Context</p>
+        </footer>
+    </div>
+
+    <!-- JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="js/map.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/ui.js"></script>
+
+</body>
+
+</html>

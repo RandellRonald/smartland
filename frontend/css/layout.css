@@ -1,0 +1,73 @@
+/* Layout System */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+/* Header */
+.app-header {
+    height: auto;
+    /* Allow height to grow */
+    min-height: 64px;
+    border-bottom: 1px solid var(--border-card);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    /* Add padding since we auto height */
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.app-title {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.app-subtitle {
+    font-size: 14px;
+    font-weight: 400;
+    /* Normal weight */
+    color: var(--text-muted);
+    margin-top: 4px;
+}
+
+/* Grid Layout */
+.main-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+@media (min-width: 1024px) {
+    .main-grid {
+        grid-template-columns: 40% 60%;
+    }
+}
+
+.input-column {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.results-column {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Footer */
+.app-footer {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border-card);
+    text-align: center;
+    font-size: 12px;
+    color: var(--text-muted);
+}

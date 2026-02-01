@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "flood_zones",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "hazard_level": "High Flood Risk" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ 76.25, 9.95 ], [ 76.3, 9.95 ], [ 76.3, 9.98 ], [ 76.25, 9.98 ], [ 76.25, 9.95 ] ] ] } }
+]
+}

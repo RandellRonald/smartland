@@ -1,0 +1,9 @@
+{
+"type": "FeatureCollection",
+"name": "kochi_wards",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "ward_name": "Fort Kochi" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ 76.2, 9.9 ], [ 76.27, 9.9 ], [ 76.27, 9.97 ], [ 76.2, 9.97 ], [ 76.2, 9.9 ] ] ] } },
+{ "type": "Feature", "properties": { "ward_name": "Ernakulam Central" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ 76.27, 9.9 ], [ 76.35, 9.9 ], [ 76.35, 9.97 ], [ 76.27, 9.97 ], [ 76.27, 9.9 ] ] ] } }
+]
+}
